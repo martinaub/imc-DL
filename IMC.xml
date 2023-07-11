@@ -11586,4 +11586,29 @@
       <description>Textual description of the health status</description>
     </field>
   </message>
+
+  <message id="2016" name="Detected Target State" abbrev="DetectedTargetState" source="ccu,vehicle" category="Networking">
+    <description>This message is the output of the sensor fusion from the estimated states and the computational vision deep learning algorithm </description>
+    <field name="Target ID" abbrev="targetID" type="plaintext">
+      <description>ID of the Detected Target</description>
+    </field>
+    <field name="Confidence" abbrev="confidence" type="fp32_t" unit="%">
+      <description>Confidence value for the detected object</description>
+    </field>
+    <field name="Targetlong" abbrev="targetLong" type="fp32_t" unit="rad">
+      <description>Longitude value for the detected object</description>
+    </field>
+    <field name="TargetLat" abbrev="targetLat" type="fp32_t" unit="rad">
+      <description>Latitude value for the detected object</description>
+    </field>
+    <field name="Side" abbrev="side" type="uint8_t" unit="Enumerated" enum-def="Boolean">
+      <description>Side of the detected object from the vehicle (port = 0 and starboard =1)</description>
+    </field>
+    <field name="Distance" abbrev="distance" type="fp32_t" unit="m">
+      <description>Distance from the vehicle and the detected object</description>
+    </field>
+    <field name="TargetAngle" abbrev="targetAngle" type="fp32_t" unit="rad">
+      <description>Angle of the detected object if we have have several detection</description>
+    </field>
+  </message>
 </messages>
